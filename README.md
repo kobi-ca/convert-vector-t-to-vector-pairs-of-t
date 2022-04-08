@@ -30,5 +30,8 @@ https://stackoverflow.com/questions/71707122/how-to-convert-stdvectort-to-a-vect
 ## Godbolt compiler explorer
 https://godbolt.org/z/sGrcjzb35
 
-##  quick-bench
-https://quick-bench.com/q/LEmEP3OVhO4svwgO5bGDOOKHoJ0
+##  quick-bench and
+https://quick-bench.com/q/LEmEP3OVhO4svwgO5bGDOOKHoJ0 \
+Accumulate with reserve https://quick-bench.com/q/DEopRPxQhtN25jaRAb3g5txSObM \
+Adj with reserve https://quick-bench.com/q/d4d0clXnnS6UQocFy0m-xB4nnDI \
+With bigger input https://quick-bench.com/q/a_ZLPWLE02LJrwlguxU201PoWn4 
