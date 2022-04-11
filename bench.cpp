@@ -14,7 +14,11 @@ namespace with_ranges1 {
     auto get(const auto& c) {
         auto odds = c | ranges::views::drop(0) | ranges::views::stride(2);
         auto evens = c | ranges::views::drop(1) | ranges::views::stride(2);
-        return ranges::views::zip(odds, evens) | ranges::to<std::vector>();
+        auto rng = ranges::views::zip(odds, evens);
+        std::vector<std::pair<int, int>> result;
+        result.reserve(c.size()/2);
+        ranges::copy(rng, std::back_inserter(result));
+        return result;
     }
 }
 
@@ -26,7 +30,11 @@ namespace with_ranges2 {
         {
             return std::pair(*chunk.begin(), *std::next(chunk.begin()));
         };
-        return c | ranges::views::chunk(2) | ranges::views::transform(chunk_to_pair) | ranges::to<std::vector>();
+        auto rng = c | ranges::views::chunk(2) | ranges::views::transform(chunk_to_pair);
+        std::vector<std::pair<int, int>> result;
+        result.reserve(c.size()/2);
+        ranges::copy(rng, std::back_inserter(result));
+        return result;
     }
 }
 
